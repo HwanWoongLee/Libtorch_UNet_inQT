@@ -3,11 +3,11 @@
 #include "QSeg.h"
 
 QDrawLabel::QDrawLabel(QWidget* parent, Qt::WindowFlags f) : QLabel(parent) {
-	m_pParent				= nullptr;
-	m_bMouseDown[eLBUTTON]	= false;
-	m_bMouseDown[eRBUTTON]	= false;
-	m_iBrushSize			= 20;
-	m_iLayer				= 0;
+    m_pParent = nullptr;
+    m_bMouseDown[eLBUTTON] = false;
+    m_bMouseDown[eRBUTTON] = false;
+    m_iBrushSize = 20;
+    m_iLayer = 0;
 
 	this->setCursor(Qt::CrossCursor);
 	this->setMouseTracking(true);
@@ -20,14 +20,14 @@ void QDrawLabel::SetParent(QSeg* parent) {
 }
 
 void QDrawLabel::SetImage(cv::Mat image) {
-	m_orgImage		= image.clone();
-	m_maskImage		= cv::Mat::zeros(m_orgImage.size(), CV_8UC3);
-	m_resultImage	= cv::Mat();
-	m_drawImage		= m_orgImage.clone();
+    m_orgImage = image.clone();
+    m_maskImage = cv::Mat::zeros(m_orgImage.size(), CV_8UC3);
+    m_resultImage = cv::Mat();
+    m_drawImage = m_orgImage.clone();
 
-	m_pixmapSize	= this->pixmap()->size();
+    m_pixmapSize = this->pixmap()->size();
 
-	return;
+    return;
 }
 
 void QDrawLabel::SetLayer(int num) {
@@ -139,9 +139,7 @@ cv::Mat QDrawLabel::Masking() {
 	return GetLayerImage();
 }
 
-/// <summary>
 /// mouse event
-/// </summary>
 void QDrawLabel::mousePressEvent(QMouseEvent* ev) {
 	const QPoint pt = ev->pos();
 	auto b = ev->button();
