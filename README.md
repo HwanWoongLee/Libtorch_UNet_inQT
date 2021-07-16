@@ -1,8 +1,7 @@
-## Pytorch_UNet_inQT
+## Libtorch_UNet_inQT
 + QT Project
 + UNet
-+ Pytorch
-+ Libtorch (C++)
++ Libtorch (Pytorch C API)
 + Deep Leaning, Image Segmentation
 
 ## Version
@@ -44,4 +43,13 @@ __You have to match the name of the mask and image file as follows.__
 
 ### Ladbeling Tool
 ![labeling](https://user-images.githubusercontent.com/20108771/125878038-1e4490df-af27-4fd8-9864-183a8fa5f136.PNG)
+
+
+### Train
+![Train](https://user-images.githubusercontent.com/20108771/125879424-950acc6f-7b51-47f3-8aa0-c5df3fb262fa.PNG)
+
+
+### Test
+![test](https://user-images.githubusercontent.com/20108771/125879500-6c356ca6-2c75-4695-b333-27b0daeb0a3e.PNG)
+
 
