@@ -19,29 +19,29 @@ public:
 		eEND,
 	};
 
-	cv::Mat Masking();
-	cv::Mat GetLayerImage();
-	cv::Mat GetMaskImage() { return m_resultImage.clone(); }
-	void SetParent(QSeg* parent);
-	void SetImage(cv::Mat image);
-	void SetLayer(int num);
-	void SetBrushSize(int size);
+	cv::Mat		Masking();
+	cv::Mat		GetLayerImage();
+	cv::Mat		GetMaskImage() { return m_resultImage.clone(); }
+	void		SetParent(QSeg* parent);
+	void		SetImage(cv::Mat image);
+	void		SetLayer(int num);
+	void		SetBrushSize(int size);
 
 private:
-	cv::Point ViewPtToMatPt(QPoint pt);
+	cv::Point	ViewPtToMatPt(QPoint pt);
 
 private:
-	QSeg*	m_pParent;
-	bool	m_bMouseDown[eEND];
-	int		m_iBrushSize;
-	int		m_iLayer;
+	QSeg*		m_pParent;
+	bool		m_bMouseDown[eEND];
+	int			m_iBrushSize;
+	int			m_iLayer;
 
-	cv::Mat m_orgImage;
-	cv::Mat m_drawImage;
-	cv::Mat m_maskImage;
-	cv::Mat m_resultImage;
+	cv::Mat		m_orgImage;
+	cv::Mat		m_drawImage;
+	cv::Mat		m_maskImage;
+	cv::Mat		m_resultImage;
 
-	QSize	m_pixmapSize;
+	QSize		m_pixmapSize;
 
 signals:
 	void mousePressed(const QPoint&);

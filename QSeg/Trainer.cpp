@@ -127,7 +127,6 @@ bool Trainer::Train(QString train_path, QString val_path, int epoch, int batchsi
 	m_pParent->WriteTrainLog("..........Set dataset");
 
 	// train
-	
 	auto device = torch::cuda::is_available() ? torch::kCUDA : torch::kCPU;
 	m_model->to(device);
 
