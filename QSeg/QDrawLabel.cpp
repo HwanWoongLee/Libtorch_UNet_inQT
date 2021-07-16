@@ -133,6 +133,7 @@ cv::Mat QDrawLabel::Masking() {
 		}
 	}
 	cv::normalize(result, result, min, 255, cv::NORM_MINMAX);
+	result = ~result;
 	m_resultImage = result.clone();
 	
 	return GetLayerImage();
