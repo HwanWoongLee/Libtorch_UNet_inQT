@@ -20,10 +20,28 @@ Link : https://www.mvtec.com/company/research/datasets/mvtec-ad/
 + dataset
   + carpet
     + train
-      + image         - (org images)
-      + mask          - (labeling images)
+      + image
+      + mask
     + val
       + image
       + mask
 
-### Load Dataset
+__You have to match the name of the mask and image file as follows.__  
++ in image folder
+  + *somename_0.png* (or .jpg, .bmp, ...)  
+  + *somename_1.png* 
+  + *somename_2.png* 
+  + ...
++ in mask folder
+  + *somename_0_mask.png* (or .jpg, .bmp, ...)  
+  + *somename_1_mask.png* 
+  + *somename_2_mask.png* 
+  + ...
+
+### Dataset Load
+![datasetload](https://user-images.githubusercontent.com/20108771/125877483-0a6c75af-c61b-4854-a2f6-885672d67719.PNG)
+
+
+### Ladbeling Tool
+![labeling](https://user-images.githubusercontent.com/20108771/125878038-1e4490df-af27-4fd8-9864-183a8fa5f136.PNG)
+
