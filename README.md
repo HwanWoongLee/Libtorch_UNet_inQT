@@ -41,7 +41,7 @@ __You have to match the name of the mask and image file as follows.__
 ![datasetload](https://user-images.githubusercontent.com/20108771/125877483-0a6c75af-c61b-4854-a2f6-885672d67719.PNG)
 
 
-### Ladbeling Tool
+### Labeling Tool
 ![labeling](https://user-images.githubusercontent.com/20108771/125878038-1e4490df-af27-4fd8-9864-183a8fa5f136.PNG)
 
 
