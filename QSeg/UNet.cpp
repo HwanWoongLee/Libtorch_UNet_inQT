@@ -84,21 +84,25 @@ nn::Sequential UNetImpl::CBR2d(int in_channel, int out_channel) {
 torch::Tensor UNetImpl::forward(const torch::Tensor& x) {
 	auto enc_1_1	= down_conv_1_1->forward(x);
 	auto enc_1_2	= down_conv_1_2->forward(enc_1_1);
+	//enc_1_2			= dropout2d->forward(enc_1_2);
 	auto pool1		= pooling_1->forward(enc_1_2);
 	pool1			= dropout2d->forward(pool1);
 
 	auto enc_2_1	= down_conv_2_1->forward(pool1);
 	auto enc_2_2	= down_conv_2_2->forward(enc_2_1);
+	//enc_2_2			= dropout2d->forward(enc_2_2);
 	auto pool2		= pooling_2->forward(enc_2_2);
 	pool2			= dropout2d->forward(pool2);
 
 	auto enc_3_1	= down_conv_3_1->forward(pool2);
 	auto enc_3_2	= down_conv_3_2->forward(enc_3_1);
+	//enc_3_2			= dropout2d->forward(enc_3_2);
 	auto pool3		= pooling_3->forward(enc_3_2);
 	pool3			= dropout2d->forward(pool3);
 
 	auto enc_4_1	= down_conv_4_1->forward(pool3);
 	auto enc_4_2	= down_conv_4_2->forward(enc_4_1);
+	enc_4_2			= dropout2d->forward(enc_4_2);
 	auto pool4		= pooling_4->forward(enc_4_2);
 	pool4			= dropout2d->forward(pool4);
 

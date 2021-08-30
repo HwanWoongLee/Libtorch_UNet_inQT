@@ -1,4 +1,5 @@
-
+*.stash
+*.exe
 *.iml
 *.xml
 *.txt
