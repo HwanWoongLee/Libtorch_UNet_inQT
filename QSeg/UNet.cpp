@@ -72,7 +72,7 @@ UNetImpl::~UNetImpl() {
 
 }
 
-// Conv Batch ReLU
+// Conv->Batch->ReLU
 nn::Sequential UNetImpl::CBR2d(int in_channel, int out_channel) {
 	return nn::Sequential(
 		nn::Conv2d(nn::Conv2dOptions(in_channel, out_channel, 3).padding(1).stride(1)),

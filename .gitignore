@@ -24,3 +24,6 @@
 *.ilk
 *.exe
 *.exp
+*.db-shm
+*.db-wal
+*.opendb

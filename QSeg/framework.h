@@ -24,5 +24,5 @@ using namespace cv;
 
 void SearchDirectory(QString strPath, std::vector<QString>& strPathList);
 void SearchDirectory(QString strPath, std::vector<string>& strPathList);
-bool GetFilePath(QString strCaption, QString& strPath, bool bFile = false);		// bFile=true : file, false=folder
+bool GetFilePath(QString strCaption, QString& strPath, bool bFile = false);		// bFile = true -> file , = false -> folder
 QImage MatToQImage(const cv::Mat& mat);

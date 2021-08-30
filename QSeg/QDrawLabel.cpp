@@ -157,6 +157,7 @@ void QDrawLabel::mousePressEvent(QMouseEvent* ev) {
 	
 	return;
 }
+
 void QDrawLabel::mouseMoveEvent(QMouseEvent* ev) {
 	if (m_maskImage.empty() || m_drawImage.empty())
 		return;

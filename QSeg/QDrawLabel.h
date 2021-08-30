@@ -44,13 +44,13 @@ private:
 	QSize		m_pixmapSize;
 
 signals:
-	void mousePressed(const QPoint&);
-	void mouseMovwed(const QPoint&);
-	void mouseReleased(const QPoint&);
+	void		mousePressed(const QPoint&);
+	void		mouseMovwed(const QPoint&);
+	void		mouseReleased(const QPoint&);
 
 protected:
-	void mousePressEvent(QMouseEvent* ev);
-	void mouseMoveEvent(QMouseEvent* ev);
-	void mouseReleaseEvent(QMouseEvent* ev);
+	void		mousePressEvent(QMouseEvent* ev);
+	void		mouseMoveEvent(QMouseEvent* ev);
+	void		mouseReleaseEvent(QMouseEvent* ev);
 };
 

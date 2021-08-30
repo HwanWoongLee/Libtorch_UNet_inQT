@@ -98,9 +98,9 @@ bool Trainer::Train(QString train_path, QString val_path, int epoch, int batchsi
 
 	vector<std::string> image_list, mask_list;
 	vector<std::string> image_list_val, mask_list_val;
+
 	SearchDirectory(train_image_path, image_list);
 	SearchDirectory(train_mask_path, mask_list);
-
 	SearchDirectory(image_path_val, image_list_val);
 	SearchDirectory(mask_path_val, mask_list_val);
 
